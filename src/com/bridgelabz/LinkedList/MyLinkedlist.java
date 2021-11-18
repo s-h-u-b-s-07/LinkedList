@@ -58,6 +58,28 @@ public class MyLinkedlist<T> {
         tail = newNode;
     }
 
+    public void insertAtMid(int position, T data) {
+        Node newNode = new Node(data);
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return;
+        }
+
+        Node temp = head;
+        int idx = 1;
+        while (temp.next != null) {
+            if (idx == position - 1) {
+                break;
+            }
+            idx++;
+            temp = temp.next;
+        }
+        Node nxt = temp.next;
+        temp.next = newNode;
+        newNode.next = nxt;
+    }
+
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
