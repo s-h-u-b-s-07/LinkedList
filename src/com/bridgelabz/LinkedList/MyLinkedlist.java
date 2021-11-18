@@ -43,6 +43,21 @@ public class MyLinkedlist<T> {
 
     }
 
+    public void insertAtTail(T data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            insertAtHead(data);
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        tail = newNode;
+    }
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -59,3 +74,4 @@ public class MyLinkedlist<T> {
 
 
 }
+
