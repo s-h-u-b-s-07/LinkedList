@@ -7,9 +7,11 @@ public class LinkedList {
 
         MyLinkedlist singleLinkedlist = new MyLinkedlist();
         singleLinkedlist.add(56);
+        singleLinkedlist.add(30);
         singleLinkedlist.add(70);
-        singleLinkedlist.insertAtMid(2,30);
-        singleLinkedlist.display(singleLinkedlist.head);
+
+        Node newHead = singleLinkedlist.pop();
+        singleLinkedlist.display(newHead);
 
     }
 }

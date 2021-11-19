@@ -79,6 +79,15 @@ public class MyLinkedlist<T> {
         newNode.next = nxt;
     }
 
+    public Node pop() {
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return head;
+        }
+        Node newHead = head.next;
+        return newHead;
+    }
+
 
     public void display(Node head) {
         if (isEmpty()) {
@@ -94,6 +103,4 @@ public class MyLinkedlist<T> {
         System.out.println("Null");
     }
 
-
 }
-
