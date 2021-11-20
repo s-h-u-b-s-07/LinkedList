@@ -112,7 +112,6 @@ public class MyLinkedlist<T> {
         return false;
     }
 
-
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -126,5 +125,6 @@ public class MyLinkedlist<T> {
         }
         System.out.println("Null");
     }
+
 
 }

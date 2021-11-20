@@ -9,13 +9,8 @@ public class LinkedList {
         singleLinkedlist.add(56);
         singleLinkedlist.add(30);
         singleLinkedlist.add(70);
+        singleLinkedlist.insertAtMid(3,40);
         singleLinkedlist.display(singleLinkedlist.head);
-
-        if (singleLinkedlist.searchKey(30)) {
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
 
 
     }
