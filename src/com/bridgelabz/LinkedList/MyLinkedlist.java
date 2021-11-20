@@ -1,21 +1,21 @@
 package com.bridgelabz.LinkedList;
 
 class Node<T> {
-    T data;
+    int data;
     Node next;
 
-    public Node(T data) {
+    public Node(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
-public class MyLinkedlist<T> {
+public class MyLinkedlist {
 
     Node head = null;
     Node tail;
 
-    public void add(T data) {
+    public void add(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -36,14 +36,14 @@ public class MyLinkedlist<T> {
         return false;
     }
 
-    public void insertAtHead(T data) {
+    public void insertAtHead(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
 
     }
 
-    public void insertAtTail(T data) {
+    public void insertAtTail(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             insertAtHead(data);
@@ -58,7 +58,7 @@ public class MyLinkedlist<T> {
         tail = newNode;
     }
 
-    public void insertAtMid(int position, T data) {
+    public void insertAtMid(int position, int data) {
         Node newNode = new Node(data);
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -101,7 +101,7 @@ public class MyLinkedlist<T> {
         temp.next = null;
     }
 
-    public boolean searchKey(T key) {
+    public boolean searchKey(int key) {
         Node temp = head;
         while (temp != null) {
             if (temp.data == key) {
@@ -140,4 +140,26 @@ public class MyLinkedlist<T> {
         System.out.println("Null");
     }
 
+    public void sort() {
+        Node current = head;
+        Node nxt;
+
+        while (current != null) {
+            nxt = current.next;
+
+            while (nxt != null) {
+
+                if (current.data >= nxt.data) {
+
+                    int temp = current.data;
+                    current.data = nxt.data;
+                    nxt.data = temp;
+
+                }
+                nxt = nxt.next;
+            }
+            current = current.next;
+        }
+
+    }
 }
