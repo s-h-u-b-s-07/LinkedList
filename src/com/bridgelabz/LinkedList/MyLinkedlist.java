@@ -91,7 +91,7 @@ public class MyLinkedlist<T> {
     public void popLast() {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
-            return ;
+            return;
         }
 
         Node temp = head;
@@ -112,6 +112,20 @@ public class MyLinkedlist<T> {
         return false;
     }
 
+    public void size() {
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return;
+        }
+        int count = 0;
+        Node temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        System.out.println("Length Of Linkedlist: " + count);
+    }
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -125,6 +139,5 @@ public class MyLinkedlist<T> {
         }
         System.out.println("Null");
     }
-
 
 }
