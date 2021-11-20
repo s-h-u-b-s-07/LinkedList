@@ -12,14 +12,6 @@ class Node<T> {
 
 public class MyLinkedlist<T> {
 
-    /**
-     * UC1 Create a simple linkedlist of 56,30 and 70.
-     *
-     * @author prem
-     * @version 12.1
-     * @since 25/08/2021
-     */
-
     Node head = null;
     Node tail;
 
@@ -44,28 +36,12 @@ public class MyLinkedlist<T> {
         return false;
     }
 
-    /**
-     * UC2 Ability to create linkedlist by adding 30 and 56 to 70.
-     *
-     * @author prem
-     * @version 12.2
-     * @since 25/08/2021
-     */
-
     public void insertAtHead(T data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
 
     }
-
-    /**
-     * UC3 Ability to create linkedlist by appending 30 and 70 to 56.
-     *
-     * @author prem
-     * @version 12.3
-     * @since 25/08/2021
-     */
 
     public void insertAtTail(T data) {
         Node newNode = new Node(data);
@@ -81,14 +57,6 @@ public class MyLinkedlist<T> {
         temp.next = newNode;
         tail = newNode;
     }
-
-    /**
-     * UC4 Ability to insert 30 between 56 and 70.
-     *
-     * @author prem
-     * @version 12.4
-     * @since 25/08/2021
-     */
 
     public void insertAtMid(int position, T data) {
         Node newNode = new Node(data);
@@ -111,14 +79,6 @@ public class MyLinkedlist<T> {
         newNode.next = nxt;
     }
 
-    /**
-     * UC5 Ability to delete first element in the linkedlist .
-     *
-     * @author prem
-     * @version 12.5
-     * @since 25/08/2021
-     */
-
     public Node pop() {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -127,14 +87,6 @@ public class MyLinkedlist<T> {
         Node newHead = head.next;
         return newHead;
     }
-
-    /**
-     * UC6 Ability to delete last element in the linkedlist .
-     *
-     * @author prem
-     * @version 12.6
-     * @since 25/08/2021
-     */
 
     public void popLast() {
         if (isEmpty()) {
@@ -148,14 +100,6 @@ public class MyLinkedlist<T> {
         }
         temp.next = null;
     }
-
-    /**
-     * UC7 Ability to serch linkedlist to find node with value 30.
-     *
-     * @author prem
-     * @version 12.7
-     * @since 25/08/2021
-     */
 
     public boolean searchKey(T key) {
         Node temp = head;
