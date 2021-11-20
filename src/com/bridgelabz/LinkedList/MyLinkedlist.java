@@ -12,6 +12,7 @@ class Node<T> {
 
 public class MyLinkedlist<T> {
 
+
     Node head = null;
     Node tail;
 
@@ -35,6 +36,7 @@ public class MyLinkedlist<T> {
         }
         return false;
     }
+
 
     public void insertAtHead(T data) {
         Node newNode = new Node(data);
@@ -88,6 +90,19 @@ public class MyLinkedlist<T> {
         return newHead;
     }
 
+    public void popLast() {
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return ;
+        }
+
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+
 
     public void display(Node head) {
         if (isEmpty()) {
@@ -103,4 +118,6 @@ public class MyLinkedlist<T> {
         System.out.println("Null");
     }
 
+
 }
+
